@@ -1,0 +1,8 @@
+.idea
+node_modules
+tmp
+**/*.js
+**/*.js.map
+**/*.d.ts
+**/*.d.ts.map
+.env

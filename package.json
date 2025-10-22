@@ -1,0 +1,27 @@
+{
+  "name": "sse-stream-transform",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": "./sse-transform.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.lib.json",
+    "test": "tsx --test"
+  },
+  "keywords": [
+    "SSE",
+    "Stream",
+    "Transform",
+    "EventSource",
+    "WebStreams",
+    "Web API"
+  ],
+  "author": "Ziv Perry",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "semantic-release": "^25.0.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
