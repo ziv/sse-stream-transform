@@ -3,7 +3,7 @@
   "description": "SSE Transform Stream for parsing Server-Sent Events (SSE) using Web Streams API",
   "version": "0.0.1",
   "type": "module",
-  "exports": "./sse-transform.js",
+  "exports": "./sse-stream-transform.js",
   "scripts": {
     "build": "tsc --project tsconfig.lib.json",
     "test": "tsx --test"
@@ -18,6 +18,11 @@
   ],
   "author": "Ziv Perry",
   "license": "MIT",
+  "files": [
+    "sse-stream-transform.js",
+    "sse-stream-transform.d.ts",
+    "readme.md"
+  ],
   "devDependencies": {
     "@types/node": "^24.9.1",
     "semantic-release": "^25.0.1",
