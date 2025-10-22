@@ -1,7 +1,7 @@
 {
   "name": "sse-stream-transform",
   "description": "SSE Transform Stream for parsing Server-Sent Events (SSE) using Web Streams API",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "exports": "./sse-transform.js",
   "scripts": {
