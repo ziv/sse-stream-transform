@@ -5,14 +5,15 @@ Transform Server-Sent Events (SSE) raw response streams into SSE objects stream.
 ## Background
 
 Server-Sent Events (SSE) is a standard for streaming text-based event data from a server to a client over HTTP. While
-the SSE protocol is widely supported in browsers via the `EventSource` API, handling SSE streams in other JavaScript
-environments (like Node.js or Deno) often requires custom parsing of the raw stream data.
+the SSE protocol is widely supported in browsers via the
+`EventSource` [API](https://developer.mozilla.org/en-US/docs/Web/API/EventSource), handling SSE streams in other
+JavaScript environments (like Node.js or Deno) often requires custom parsing of the raw stream data.
 
 [More info about SSE at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)
 
 ### Isomorphic
 
-Support any JavaScript runtime in server and client side (Node.js, Deno,
+Support any JavaScript runtime in server and client side (Node.js, Deno, Bun,
 Browser, etc.) that supports the [Web Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API).
 
 ## Usage
