@@ -2,10 +2,18 @@
 
 Transform Server-Sent Events (SSE) raw response streams into SSE objects stream.
 
-## Isomorphic
+## Background
+
+Server-Sent Events (SSE) is a standard for streaming text-based event data from a server to a client over HTTP. While
+the SSE protocol is widely supported in browsers via the `EventSource` API, handling SSE streams in other JavaScript
+environments (like Node.js or Deno) often requires custom parsing of the raw stream data.
+
+[More info about SSE at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)
+
+### Isomorphic
 
 Support any JavaScript runtime in server and client side (Node.js, Deno,
-Browser, etc.) that supports the Web Streams API.
+Browser, etc.) that supports the [Web Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API).
 
 ## Usage
 
@@ -18,12 +26,14 @@ npm install sse-stream-transform
 Using the transformer to consume SSE messages:
 
 ```ts
-import { SseStreamTransform } from "sse-stream-transform";
+import {SseStreamTransform} from "sse-stream-transform";
 
-// end point that returns SSE response
-const res = await fetch("https://example.com/sse-endpoint");
+// endpoint that returns SSE response stream
+const response = await fetch("https://example.com/sse-endpoint");
 
-for await (const msg of res.body.pipeThrough(new SseStreamTransform())) {
-  console.log("Received SSE message:", msg);
+// iterate over SSE messages using for-await-of 
+// and the SseStreamTransform
+for await (const msg of response.body.pipeThrough(new SseStreamTransform())) {
+    console.log("Received SSE message:", msg);
 }
 ```
