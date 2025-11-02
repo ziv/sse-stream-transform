@@ -5,4 +5,5 @@ tmp
 **/*.js.map
 **/*.d.ts
 **/*.d.ts.map
+**/*.cjs
 .env
