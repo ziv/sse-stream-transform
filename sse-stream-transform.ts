@@ -22,6 +22,10 @@ export type SearchResultsTransformer =
     & { decoder: TextDecoder; buffer: string }
     & Transformer;
 
+/**
+ * SSE Message type yielded by the transformer.
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent
+ */
 export type SSEMessage = { data: string } & Record<string, string>;
 
 /**
@@ -42,9 +46,7 @@ export type SearchResultsTransformOptions = {
  * ```ts
  * const sseTransformer = new SseStreamTransform();
  * const response = await fetch("your-sse-endpoint");
- * const readableStream = response.body
- *   ?.pipeThrough(sseTransformer)
- *   .pipeThrough(new YourNextTransformStream());
+ * const readableStream = response.body?.pipeThrough(sseTransformer).pipeThrough(new YourNextTransformStream());
  * ```
  */
 export class SseStreamTransform extends TransformStream<unknown, SSEMessage> {

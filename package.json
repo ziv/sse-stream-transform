@@ -19,6 +19,11 @@
     "Web API",
     "Server"
   ],
+  "homepage": "https://github.com/ziv/sse-stream-transform",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziv/sse-stream-transform.git"
+  },
   "author": "Ziv Perry",
   "license": "MIT",
   "files": [

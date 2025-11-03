@@ -16,6 +16,8 @@ JavaScript environments (like Node.js or Deno) often requires custom parsing of 
 Support any JavaScript runtime in server and client side (Node.js, Deno, Bun,
 Browser, etc.) that supports the [Web Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API).
 
+Exported as **ESM** and **CommonJS**.
+
 ## Usage
 
 Installation:
