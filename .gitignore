@@ -7,3 +7,4 @@ tmp
 **/*.d.ts.map
 **/*.cjs
 .env
+.claude/
