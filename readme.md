@@ -2,6 +2,8 @@
 
 Transform Server-Sent Events (SSE) raw response streams into SSE objects stream.
 
+Battle-tested in production environments.
+
 ## Background
 
 Server-Sent Events (SSE) is a standard for streaming text-based event data from a server to a client over HTTP. While
@@ -30,6 +32,9 @@ Using the transformer to consume SSE messages:
 
 ```ts
 import {SseStreamTransform} from "sse-stream-transform";
+
+// also works in CommonJS:
+// const {SseStreamTransform} = require("sse-stream-transform");
 
 // endpoint that returns SSE response stream
 const response = await fetch("https://example.com/sse-endpoint");
